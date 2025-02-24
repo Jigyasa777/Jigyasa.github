@@ -5,87 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jigyasa - Cybersecurity Portfolio</title>
   <style>
-    @keyframes textSwitch {
-      0% { content: "{CTRL + ALT + EXPLOIT}"; }
-      50% { content: "{CTRL + ALT + DEFEND}"; }
-      100% { content: "{CTRL + ALT + EXPLOIT}"; }
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Calibri, sans-serif;
+      font-family: 'Arial', sans-serif;
     }
-
-    html, body {
-      height: 100%;
-      background-color: #000000; 
+    body {
+      background-color: #0a0a0a;
       color: #ffffff;
       text-align: center;
+      padding: 20px;
     }
-
     .navbar {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .navbar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
     }
-
-    .navbar ul li {
-      display: inline;
-    }
-
-    .navbar ul li a {
-      color: #ffffff; 
-      font-weight: bold;
+    .navbar a {
+      color: #ffffff;
       text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      transition: background 0.3s;
     }
-
-    .navbar ul li a:hover {
-      text-decoration: underline;
+    .navbar a:hover {
+      background: #333333;
     }
-
     .header {
-      margin-top: 60px;
       font-size: 50px;
       font-weight: bold;
     }
-
     .animated-text {
       font-size: 25px;
       font-weight: bold;
       margin-top: 10px;
     }
-
-    .animated-text::after {
-      content: "{CTRL + ALT + EXPLOIT}";
-      display: inline-block;
-      animation: textSwitch 3s infinite alternate ease-in-out;
-    }
-
-    .container {
+    .section {
       max-width: 800px;
-      margin: 40px auto;
+      margin: auto;
       padding: 20px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
     }
-
-    h2 {
-      margin-top: 30px;
-      font-size: 28px;
+    .content {
+      display: none;
+      padding: 15px;
+      text-align: left;
     }
-
-    p {
-      font-size: 20px;
-    }
-
     .certifications img {
       width: 120px;
       margin: 10px;
@@ -93,72 +65,83 @@
   </style>
 </head>
 <body>
+  <div class="header">JIGYASA</div>
+  <div class="animated-text">{CTRL + ALT + EXPLOIT} | {CTRL + ALT + DEFEND}</div>
+
   <nav class="navbar">
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blogs</a></li>
-      <li><a href="#">Achievements</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Work Samples</a></li>
-    </ul>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Work Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#samples">Work Samples</a>
+    <a href="#blogs">Blogs</a>
   </nav>
 
-  <div class="header">JIGYASA</div>
-  <div class="animated-text"></div>
-
-  <div class="container">
+  <div class="section" onclick="toggleContent('about-content')">
     <h2>About</h2>
-    <p>I am a current Master’s student majoring in Cybersecurity and currently looking for full-time jobs.</p>
+    <div class="content" id="about-content">
+      <p>I am a current Master’s student majoring in Cybersecurity and currently looking for full-time jobs.</p>
+    </div>
+  </div>
 
+  <div class="section" onclick="toggleContent('education-content')">
     <h2>Education</h2>
-    <p><strong>East Tennessee State University, Johnson City, TN</strong><br>
-      Master of Information Systems, Cybersecurity; 3.9 GPA (Aug. 2023 – May 2025)</p>
-    <p><strong>Amity University, Noida, India</strong><br>
-      Bachelor of Computer Applications (Aug. 2019 – May 2022)</p>
+    <div class="content" id="education-content">
+      <p>Master of Information Systems, Cybersecurity (3.9 GPA) - East Tennessee State University</p>
+      <p>Bachelor of Computer Applications - Amity University</p>
+    </div>
+  </div>
 
+  <div class="section" onclick="toggleContent('experience-content')">
     <h2>Work Experience</h2>
-    <p><strong>Graduate Research Analyst [Cybersecurity & Machine Learning]</strong> (Jan. 2024 – Present)<br>
-      East Tennessee State University, Johnson City, TN</p>
-    <ul>
-      <li>Key liaison between machine learning specialists and cybersecurity researchers.</li>
-      <li>Developed AI models for threat detection and mitigation.</li>
-      <li>Integrated AI techniques into 5+ projects & 2 research papers.</li>
-    </ul>
+    <div class="content" id="experience-content">
+      <p>Graduate Research Analyst - ETSU</p>
+      <p>Information Security Support Specialist - Thesiscreators</p>
+      <p>Product Security Analyst Intern - Hackplanet Technology</p>
+    </div>
+  </div>
 
-    <p><strong>Information Security Support Specialist</strong> (May 2022 – June 2023)<br>
-      Thesiscreators.com, India (Remote)</p>
-    <ul>
-      <li>Implemented GRC initiatives, ensuring compliance with ISO, NIST, and PCI standards.</li>
-      <li>Conducted risk assessments and audits, identifying 300+ vulnerabilities annually.</li>
-      <li>Utilized SIEM and IDS/IPS tools to improve incident response by 25%.</li>
-    </ul>
-
-    <p><strong>Product Security Analyst Intern</strong> (May 2021 – Aug. 2021)<br>
-      Hackplanet Technology, Noida, India (On-site)</p>
-    <ul>
-      <li>Conducted threat modeling, security risk evaluations, and vulnerability assessments.</li>
-      <li>Led penetration testing and vulnerability scanning.</li>
-      <li>Ensured alignment with FDA Cybersecurity Guidance and IEC 81001-5-1.</li>
-    </ul>
-
+  <div class="section" onclick="toggleContent('certifications-content')">
     <h2>Certifications & Achievements</h2>
-    <div class="certifications">
+    <div class="content" id="certifications-content">
       <img src="oscp-logo.png" alt="OSCP Logo">
       <img src="security-plus-logo.png" alt="Security+ Logo">
+      <p>CompTIA Security+ (SY0-701)</p>
+      <p>OSCP (In Progress)</p>
     </div>
-    <p><strong>CompTIA Security+ (SY0-701)</strong>, July 2024</p>
-    <p><strong>THM Top 11 Percent</strong>, 2024 – Present</p>
-    <p><strong>eCTF MITRE 2025</strong>, WIP; Expected May 2025</p>
-    <p><strong>OSCP (Offensive Security Certified Professional)</strong>, WIP; Expected March 2025</p>
-
-    <h2>Projects</h2>
-    <p>[To be added]</p>
-
-    <h2>Work Samples</h2>
-    <p>[To be added]</p>
-
-    <h2>Blogs</h2>
-    <p>[To be added]</p>
   </div>
+
+  <div class="section" onclick="toggleContent('projects-content')">
+    <h2>Projects</h2>
+    <div class="content" id="projects-content">
+      <p>[To be added]</p>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggleContent('samples-content')">
+    <h2>Work Samples</h2>
+    <div class="content" id="samples-content">
+      <p>[To be added]</p>
+    </div>
+  </div>
+
+  <div class="section" onclick="toggleContent('blogs-content')">
+    <h2>Blogs</h2>
+    <div class="content" id="blogs-content">
+      <p>[To be added]</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      let content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
