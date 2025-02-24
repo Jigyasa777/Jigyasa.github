@@ -3,98 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jigyasa</title>
+  <title>Jigyasa - Cybersecurity Portfolio</title>
   <style>
-    html, body {
-      height: 100%;  /* Ensures the full height is covered */
+    @keyframes textSwitch {
+      0% { content: "CTRL + ALT + EXPLOIT"; }
+      50% { content: "CTRL + ALT + DEFEND"; }
+      100% { content: "CTRL + ALT + EXPLOIT"; }
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #000000;  /* Set the entire background color to black */
-      color: #ffffff;  /* Set all text color to white */
+      box-sizing: border-box;
+      font-family: Calibri, sans-serif;
     }
-    h1, h2 {
-      color: #ffffff;  /* White text for headings */
+
+    html, body {
+      height: 100%;
+      background-color: #000000; 
+      color: #ffffff;
+      text-align: center;
     }
-    a {
-      color: #1E90FF;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      box-shadow: none;  /* No shadow */
-      background-color: transparent;  /* Ensure no background color */
-    }
-    ul {
-      padding-left: 20px;
-    }
+
     .navbar {
       position: absolute;
       top: 20px;
       right: 20px;
     }
+
     .navbar ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
-      gap: 15px;
+      gap: 20px;
     }
+
     .navbar ul li {
       display: inline;
     }
+
     .navbar ul li a {
-      color: #ffffff;  /* White text for navbar links */
+      color: #ffffff; 
       font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      margin-top: 60px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .animated-text {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .animated-text::after {
+      content: "CTRL + ALT + EXPLOIT";
+      display: inline-block;
+      animation: textSwitch 3s infinite alternate ease-in-out;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <ul>
-      <li><a href="#">Jigyasa</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#blogs">Blogs</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#work-samples">Work Samples</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blogs</a></li>
+      <li><a href="#">Achievements</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Work Samples</a></li>
     </ul>
   </nav>
 
+  <div class="header">JIGYASA</div>
+  <div class="animated-text"></div>
+
   <div class="container">
-    <h1>Jigyasa - Cybersecurity Portfolio</h1>
+    <h2>About</h2>
     <p>Hello! I’m <strong>Jigyasa</strong>, a Master’s student in Cybersecurity with a strong focus on Governance, Risk & Compliance (GRC), secure web development, and offensive security techniques.</p>
-    
-    <h2 id="about">📚 Education</h2>
-    <ul>
-      <li><strong>Master of Information Systems, Cybersecurity</strong> – East Tennessee State University (2023 – 2025)</li>
-      <li><strong>Bachelor of Computer Applications</strong> – Amity University, India (2019 – 2022)</li>
-    </ul>
-
-    <h2 id="projects">📂 Projects</h2>
-    <ul>
-      <li><strong>HealthSync</strong> – Secure healthcare management system with DL-based authentication and Raspberry Pi integration for real-time health data syncing.</li>
-      <li><strong>Offsee GPT (AI Assistant for Offensive Security)</strong> – Built an AI assistant for CVE analysis and threat modeling, leveraging MITRE ATT&CK and OWASP frameworks.</li>
-    </ul>
-
-    <h2 id="achievements">🏆 Certifications</h2>
-    <ul>
-      <li>CompTIA Security+ (SY0-701), July 2024</li>
-      <li>OSCP (WIP), Expected March 2025</li>
-      <li>eCTF MITRE 2025 (WIP), Expected May 2025</li>
-    </ul>
-
-    <h2 id="work-samples">📞 Contact Me</h2>
-    <p>Feel free to connect with me on:</p>
-    <ul>
-      <li>📧 <strong>Email:</strong> <a href="mailto:Jigyasakang1@gmail.com">Jigyasakang1@gmail.com</a></li>
-      <li>📞 <strong>Phone:</strong> 423-707-8127</li>
-      <li>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jigyasa-kang-j7/" target="_blank">linkedin.com/in/jigyasa-kang-j7/</a></li>
-    </ul>
   </div>
 </body>
 </html>
